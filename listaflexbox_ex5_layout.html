@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atividade 5</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+
+            background-color: white;
+        }
+
+        .pagina {
+            width: 75%;
+
+            max-width: 900px;
+
+            min-height: 600px;
+
+            margin: 40px auto;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        header {
+            height: 100px;
+
+            background-color: #9bd400;
+
+            padding: 15px;
+
+            font-weight: bold;
+        }
+
+        .conteudo {
+            flex: 1;
+
+            min-height: 350px;
+
+            display: flex;
+        }
+
+        article {
+            flex: 1;
+
+            padding: 15px;
+
+            background-color: white;
+        }
+
+        aside {
+            width: 20%;
+
+            padding: 15px;
+
+            background-color: #fffbdc;
+        }
+
+        nav {
+            width: 20%;
+
+            padding: 15px;
+
+            background-color: #d9ead3;
+        }
+
+        footer {
+            height: 100px;
+
+            background-color: #9bd400;
+
+            padding: 15px;
+
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+
+            .pagina {
+                width: 95%;
+            }
+
+            .conteudo {
+                flex-direction: column;
+            }
+
+            article,
+            aside,
+            nav {
+                width: 100%;
+
+                min-height: 120px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="pagina">
+
+        <header>
+            Header
+        </header>
+
+        <div class="conteudo">
+
+            <article>
+                Article
+            </article>
+
+            <aside>
+                Aside
+            </aside>
+
+            <nav>
+                Nav
+            </nav>
+
+        </div>
+
+        <footer>
+            Footer
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
