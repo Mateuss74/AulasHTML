@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Protocolo HTTP</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Protocolo HTTP</h1>
+
+    <hr>
+
+    <h2>O que é HTTP?</h2>
+
+    <p>
+        HTTP significa <strong>HyperText Transfer Protocol</strong>.
+        É um protocolo utilizado para a comunicação entre navegadores
+        e servidores na Web.
+    </p>
+
+    <p>
+        Quando acessamos um site, o navegador envia uma requisição HTTP
+        para um servidor. O servidor processa a solicitação e devolve
+        uma resposta.
+    </p>
+
+    <h2>Funcionamento</h2>
+
+    <ol>
+        <li>O usuário digita um endereço no navegador.</li>
+        <li>O navegador envia uma requisição HTTP.</li>
+        <li>O servidor recebe a requisição.</li>
+        <li>O servidor processa a solicitação.</li>
+        <li>O servidor envia uma resposta.</li>
+        <li>O navegador apresenta o conteúdo.</li>
+    </ol>
+
+    <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNBukLTtyutXxvp_ItcgfOro6xo6ITaKYQCceY9cfsLw&s=10"
+        alt="Representação de comunicação pela Internet"
+        width="500">
+
+    <h2>Exemplo de Request</h2>
+
+    <pre>
+GET /index.html HTTP/1.1
+Host: www.exemplo.com
+User-Agent: Mozilla/5.0
+Accept: text/html
+    </pre>
+
+    <h3>Campos do Request</h3>
+
+    <ul>
+        <li><strong>GET:</strong> método utilizado para solicitar um recurso.</li>
+        <li><strong>/index.html:</strong> recurso solicitado.</li>
+        <li><strong>HTTP/1.1:</strong> versão do protocolo.</li>
+        <li><strong>Host:</strong> servidor que será acessado.</li>
+        <li><strong>User-Agent:</strong> identifica o navegador ou cliente.</li>
+        <li><strong>Accept:</strong> informa quais tipos de conteúdo o cliente aceita.</li>
+    </ul>
+
+    <h2>Exemplo de Response</h2>
+
+    <pre>
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 1250
+    </pre>
+
+    <h3>Campos da Response</h3>
+
+    <ul>
+        <li><strong>HTTP/1.1:</strong> versão do protocolo.</li>
+        <li><strong>200 OK:</strong> código indicando que a solicitação foi realizada com sucesso.</li>
+        <li><strong>Content-Type:</strong> tipo de conteúdo enviado.</li>
+        <li><strong>Content-Length:</strong> tamanho aproximado do conteúdo.</li>
+    </ul>
+
+    <h2>Códigos HTTP</h2>
+
+    <table>
+
+        <caption>Alguns códigos HTTP</caption>
+
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Significado</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>200</td>
+                <td>OK - Sucesso</td>
+            </tr>
+
+            <tr>
+                <td>301</td>
+                <td>Redirecionamento</td>
+            </tr>
+
+            <tr>
+                <td>404</td>
+                <td>Página não encontrada</td>
+            </tr>
+
+            <tr>
+                <td>500</td>
+                <td>Erro interno do servidor</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <p>
+        Mais informações:
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP"
+           target="_blank">
+            Documentação HTTP - MDN
+        </a>
+    </p>
+
+</body>
+
+</html>
