@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>5B - Site Responsivo</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+
+            background-color: #eeeeee;
+        }
+
+        .menu {
+
+            min-height: 100vh;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 10px;
+
+            padding: 20px;
+        }
+
+        .menu a {
+
+            min-height: 120px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-decoration: none;
+
+            color: #333;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            border-radius: 5px;
+
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+
+            transform: scale(1.03);
+        }
+
+        .web {
+            background-color: #f99c1c;
+        }
+
+        .html {
+            background-color: #f3b39f;
+        }
+
+        .css {
+            background-color: #c7dddd;
+        }
+
+        .animate {
+            background-color: #aec0db;
+        }
+
+        .position {
+            background-color: #f5b52d;
+        }
+
+        .flex {
+            background-color: #b9ce68;
+        }
+
+        .grid {
+            background-color: #c9bde4;
+        }
+
+
+        /* RESPONSIVIDADE PARA CELULAR */
+
+        @media screen and (max-width: 600px) {
+
+            .menu {
+
+                display: flex;
+
+                flex-direction: column;
+
+                padding: 10px;
+
+            }
+
+            .menu a {
+
+                width: 100%;
+
+                min-height: 80px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="menu">
+
+        <a href="#" class="web">
+            WEB
+        </a>
+
+        <a href="#" class="html">
+            HTML
+        </a>
+
+        <a href="#" class="css">
+            CSS
+        </a>
+
+        <a href="#" class="animate">
+            Animate
+        </a>
+
+        <a href="#" class="position">
+            Position
+        </a>
+
+        <a href="#" class="flex">
+            Flex
+        </a>
+
+        <a href="#" class="grid">
+            Grid
+        </a>
+
+    </nav>
+
+</body>
+
+</html>

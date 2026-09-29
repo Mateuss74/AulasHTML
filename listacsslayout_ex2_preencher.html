@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Atividade 2 - Grid</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .pagina {
+
+            min-height: 100vh;
+
+            display: grid;
+
+            grid-template-columns: 150px 1fr;
+
+            grid-template-rows: 70px 1fr 60px;
+
+            grid-template-areas:
+
+                "header header"
+
+                "nav content"
+
+                "nav footer";
+        }
+
+        header {
+
+            grid-area: header;
+
+            background-color: #e83282;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 25px;
+        }
+
+        nav {
+
+            grid-area: nav;
+
+            background-color: #c4c28a;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 22px;
+        }
+
+        .content {
+
+            grid-area: content;
+
+            background-color: #e8aa7b;
+
+            padding: 30px;
+
+            font-size: 24px;
+
+            text-align: center;
+        }
+
+        .caixa {
+
+            width: 80px;
+
+            height: 70px;
+
+            border: 2px solid black;
+
+            margin: 20px auto;
+        }
+
+        .linhas {
+
+            width: 250px;
+
+            margin: auto;
+        }
+
+        .linhas div {
+
+            height: 3px;
+
+            background-color: black;
+
+            margin: 7px;
+        }
+
+        footer {
+
+            grid-area: footer;
+
+            background-color: #78a99a;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 22px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="pagina">
+
+        <header>
+            Header
+        </header>
+
+        <nav>
+            Nav
+        </nav>
+
+        <main class="content">
+
+            Content
+
+            <div class="caixa"></div>
+
+            <div class="linhas">
+
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            Footer
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

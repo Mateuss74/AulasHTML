@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Atividade 4 - Responsivo</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+
+            background-color: #eeeeee;
+        }
+
+        .pagina {
+
+            min-height: 100vh;
+
+            display: grid;
+
+            grid-template-columns: 150px 1fr 150px;
+
+            grid-template-rows:
+                60px 45px 1fr 45px 45px 45px;
+
+            grid-template-areas:
+
+                "header header header"
+
+                "left banner right"
+
+                "left main right"
+
+                "left low right"
+
+                "left footer right"
+
+                "left footer right";
+        }
+
+        header {
+
+            grid-area: header;
+
+            background-color: #f2b900;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-weight: bold;
+        }
+
+        .banner {
+
+            grid-area: banner;
+
+            background-color: #d9382e;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-weight: bold;
+        }
+
+        .left {
+
+            grid-area: left;
+
+            background-color: #0b9f55;
+
+            padding: 15px;
+
+            font-weight: bold;
+        }
+
+        .right {
+
+            grid-area: right;
+
+            background-color: #f2b900;
+
+            padding: 15px;
+
+            font-weight: bold;
+        }
+
+        main {
+
+            grid-area: main;
+
+            background-color: #397de5;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            color: black;
+
+            text-align: center;
+        }
+
+        .low {
+
+            grid-area: low;
+
+            background-color: #0b9f55;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-weight: bold;
+        }
+
+        footer {
+
+            grid-area: footer;
+
+            background-color: #397de5;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-weight: bold;
+        }
+
+
+        /* CELULAR */
+
+        @media screen and (max-width: 600px) {
+
+            .pagina {
+
+                grid-template-columns: 1fr;
+
+                grid-template-rows:
+                    60px
+                    45px
+                    50px
+                    1fr
+                    50px
+                    50px
+                    50px;
+
+                grid-template-areas:
+
+                    "header"
+
+                    "banner"
+
+                    "left"
+
+                    "main"
+
+                    "right"
+
+                    "low"
+
+                    "footer";
+            }
+
+            .left,
+            .right {
+
+                padding: 10px;
+            }
+
+            main {
+
+                min-height: 400px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="pagina">
+
+        <header>
+            Header
+        </header>
+
+        <div class="banner">
+            Banner
+        </div>
+
+        <aside class="left">
+            Left Aside
+        </aside>
+
+        <main>
+
+            <h2>Main Content</h2>
+
+            <p>
+                Width: 437, Height: 873
+            </p>
+
+        </main>
+
+        <aside class="right">
+            Right Aside
+        </aside>
+
+        <div class="low">
+            Low Content
+        </div>
+
+        <footer>
+            Footer
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
