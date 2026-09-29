@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>4c - Position Absolute</title>
+
+    <style>
+
+        /*
+        O body é utilizado como área de referência
+        para os elementos posicionados.
+        */
+        body {
+            margin: 0;
+            position: relative;
+            height: 500px;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /*
+        Todas as caixas terão:
+
+        position: absolute
+        -> permite definir exatamente onde cada
+           elemento ficará usando top, left, right
+           e bottom.
+
+        width e height
+        -> definem o tamanho dos quadrados.
+        */
+        .caixa {
+            position: absolute;
+
+            width: 35px;
+            height: 35px;
+        }
+
+
+        /*
+        CAIXA VERMELHA
+
+        top: 10px
+        -> fica próxima ao topo.
+
+        left: 10px
+        -> fica próxima ao lado esquerdo.
+        */
+        .vermelha {
+            background-color: red;
+
+            top: 10px;
+            left: 10px;
+        }
+
+
+        /*
+        CAIXA AMARELA
+
+        top: 10px
+        -> fica no topo.
+
+        right: 10px
+        -> fica próxima ao lado direito.
+        */
+        .amarela {
+            background-color: yellow;
+
+            top: 10px;
+            right: 10px;
+        }
+
+
+        /*
+        CAIXA ROSA
+
+        top e left são utilizados para posicionar
+        a caixa aproximadamente no centro da página.
+        */
+        .rosa {
+            background-color: magenta;
+
+            top: 150px;
+            left: 50%;
+        }
+
+
+        /*
+        CAIXA AZUL
+
+        bottom: 20px
+        -> fica próxima à parte inferior.
+
+        left: 10px
+        -> fica no lado esquerdo.
+        */
+        .azul {
+            background-color: blue;
+
+            bottom: 20px;
+            left: 10px;
+        }
+
+
+        /*
+        CAIXA VERDE
+
+        bottom: 20px
+        -> fica próxima à parte inferior.
+
+        right: 10px
+        -> fica no lado direito.
+        */
+        .verde {
+            background-color: green;
+
+            bottom: 20px;
+            right: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!--
+    Cada caixa possui position: absolute.
+
+    Isso permite posicionar cada uma
+    independentemente das outras.
+    -->
+
+    <div class="caixa vermelha"></div>
+
+    <div class="caixa amarela"></div>
+
+    <div class="caixa rosa"></div>
+
+    <div class="caixa azul"></div>
+
+    <div class="caixa verde"></div>
+
+</body>
+
+</html>

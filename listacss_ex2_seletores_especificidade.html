@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Define que o documento é HTML5 -->
+
+    <meta charset="UTF-8">
+    <!-- Permite utilizar acentos e caracteres especiais -->
+
+    <title>Exemplo especificidade de seletores</title>
+    <!-- Define o título que aparece na aba do navegador -->
+
+
+    <style>
+
+        /* 
+        SELETOR DE ELEMENTO:
+        O seletor "li" seleciona todos os elementos <li>
+        da página e deixa o texto vermelho.
+        */
+        li {
+            color: red;
+        }
+
+
+        /*
+        SELETOR DE CLASSE:
+        ".churras" seleciona todos os elementos
+        que possuem class="churras".
+        */
+        .churras {
+            color: green;
+        }
+
+
+        /*
+        OUTRO SELETOR DE CLASSE:
+        ".fruta" seleciona todos os elementos
+        que possuem class="fruta".
+        */
+        .fruta {
+            color: gray;
+        }
+
+
+        /*
+        SELETOR DE IRMÃO ADJACENTE:
+        "li + li.churras" seleciona um <li> que possui
+        a classe "churras" e que aparece imediatamente
+        depois de outro elemento <li>.
+        */
+        li + li.churras {
+            color: black;
+        }
+
+
+        /*
+        SELETOR DE ATRIBUTO:
+        ".churras[draggable="true"]" seleciona um elemento
+        que possui a classe "churras" e também possui
+        o atributo draggable="true".
+        */
+        .churras[draggable="true"] {
+            color: magenta;
+        }
+
+
+        /*
+        SELETOR DE ID:
+        "#lip1, #lip2, #lip3" seleciona os elementos
+        que possuem esses IDs.
+        O ID possui uma especificidade maior que
+        um seletor de elemento ou de classe.
+        */
+        #lip1,
+        #lip2,
+        #lip3 {
+            color: blue;
+        }
+
+
+        /*
+        ID + CLASSE:
+        "#lip3.fruta" seleciona somente o elemento
+        que possui o ID "lip3" E a classe "fruta".
+        */
+        #lip3.fruta {
+            color: orange;
+        }
+
+
+        /*
+        SELETOR DE FILHO DIRETO + CLASSE + ID:
+        "ol > li.churras#lip5" procura um elemento <li>
+        que:
+        1. Está diretamente dentro de um <ol>;
+        2. Possui a classe "churras";
+        3. Possui o ID "lip5".
+
+        O símbolo ">" significa que o elemento deve
+        ser filho direto do elemento anterior.
+        */
+        ol > li.churras#lip5 {
+            color: purple;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- 
+    <h1> cria o título principal da página.
+    -->
+    <h1>Especificidade dos Seletores CSS</h1>
+
+
+    <!-- 
+    <ol> cria uma lista ordenada.
+    Os itens dessa lista serão numerados automaticamente.
+    -->
+    <ol>
+
+
+        <!-- 
+        <li> representa um item da lista.
+        id="lip0" identifica especificamente este elemento.
+        -->
+        <li id="lip0">Abacaxi</li>
+
+
+        <!-- 
+        class="fruta" identifica o elemento como pertencente
+        à classe "fruta".
+        Por isso ele recebe o estilo de ".fruta".
+        -->
+        <li class="fruta">Melão</li>
+
+
+        <!-- 
+        Este elemento possui:
+        - id="lip2"
+        - class="fruta"
+
+        Portanto, ele pode ser afetado tanto pelo seletor
+        de ID quanto pelo seletor de classe.
+        -->
+        <li id="lip2" class="fruta">Pera</li>
+
+
+        <!-- 
+        Este elemento possui:
+        - id="lip3"
+        - class="fruta"
+
+        Ele é selecionado por ".fruta",
+        "#lip3" e também "#lip3.fruta".
+        -->
+        <li id="lip3" class="fruta">Uva</li>
+
+
+        <!-- 
+        Possui id="lip4" e class="fruta".
+        -->
+        <li id="lip4" class="fruta">Maçã</li>
+
+
+        <!-- 
+        Possui a classe "churras".
+        Portanto, recebe o estilo definido por ".churras".
+        -->
+        <li class="churras">Carne</li>
+
+
+        <!-- 
+        Também possui a classe "churras".
+        Como aparece depois de outro <li>,
+        pode ser selecionado por "li + li.churras".
+        -->
+        <li class="churras">Linguiça</li>
+
+
+        <!-- 
+        Este elemento possui:
+        - id="lip7"
+        - class="churras"
+        - draggable="true"
+
+        Por possuir class="churras" e draggable="true",
+        ele é selecionado por:
+
+        .churras[draggable="true"]
+
+        e recebe a cor definida por esse seletor.
+        -->
+        <li id="lip7" class="churras" draggable="true">
+            Pão de alho
+        </li>
+
+    </ol>
+
+</body>
+
+</html>

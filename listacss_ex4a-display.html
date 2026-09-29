@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>4a - Display Block</title>
+
+    <style>
+
+        /*
+        O body representa o corpo da página.
+
+        margin: 0 remove a margem padrão do navegador.
+        */
+        body {
+            margin: 0;
+        }
+
+
+        /*
+        A classe .caixa será utilizada nas quatro caixas.
+
+        display: block faz com que cada caixa ocupe
+        uma linha inteira.
+
+        Por isso as caixas ficam uma embaixo da outra.
+        */
+        .caixa {
+            display: block;
+
+            /*
+            A altura define o tamanho vertical
+            de cada caixa.
+            */
+            height: 65px;
+
+            /*
+            O texto fica centralizado horizontalmente.
+            */
+            text-align: center;
+
+            /*
+            Define o espaço entre o texto e as bordas.
+            */
+            line-height: 65px;
+
+            /*
+            Tamanho da fonte.
+            */
+            font-family: Arial, sans-serif;
+        }
+
+
+        /*
+        Cada caixa possui uma cor diferente,
+        seguindo o exemplo apresentado na atividade.
+        */
+
+        .caixa1 {
+            background-color: #6500ff;
+        }
+
+        .caixa2 {
+            background-color: green;
+        }
+
+        .caixa3 {
+            background-color: red;
+        }
+
+        .caixa4 {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!--
+    Cada div é um elemento do tipo block.
+
+    Como todos possuem display: block,
+    cada um começa em uma nova linha.
+    -->
+
+    <div class="caixa caixa1">1</div>
+
+    <div class="caixa caixa2">2</div>
+
+    <div class="caixa caixa3">3</div>
+
+    <div class="caixa caixa4">4</div>
+
+</body>
+
+</html>

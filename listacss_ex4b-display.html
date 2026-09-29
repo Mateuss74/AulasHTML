@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>4b - Display Inline Block</title>
+
+    <style>
+
+        /*
+        O body representa o corpo da página.
+        */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /*
+        display: inline-block faz com que as caixas
+        possam ficar lado a lado.
+
+        Diferente do display: block, elas não ocupam
+        obrigatoriamente toda a largura da linha.
+        */
+        .caixa {
+            display: inline-block;
+
+            /*
+            Cada caixa ocupa aproximadamente 25%
+            da largura disponível.
+            */
+            width: 24.5%;
+
+            /*
+            Altura das caixas.
+            */
+            height: 65px;
+
+            /*
+            Centraliza o número dentro da caixa.
+            */
+            text-align: center;
+
+            line-height: 65px;
+
+            /*
+            Faz com que largura e altura sejam calculadas
+            de maneira mais previsível.
+            */
+            box-sizing: border-box;
+        }
+
+
+        /*
+        Cada caixa possui uma cor diferente.
+        */
+
+        .caixa1 {
+            background-color: #6500ff;
+        }
+
+        .caixa2 {
+            background-color: green;
+        }
+
+        .caixa3 {
+            background-color: red;
+        }
+
+        .caixa4 {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!--
+    As quatro divs possuem display: inline-block.
+
+    Por isso elas conseguem ficar na mesma linha.
+    -->
+
+    <div class="caixa caixa1">1</div>
+
+    <div class="caixa caixa2">2</div>
+
+    <div class="caixa caixa3">3</div>
+
+    <div class="caixa caixa4">4</div>
+
+</body>
+
+</html>
